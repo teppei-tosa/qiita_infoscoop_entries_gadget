@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs
+      title="Qiita infoScoop 記事"
+      description="Qiita infoScoop 記事">
+    <Require feature="opensocial-0.8" />
+  </ModulePrefs>
+  <Content><![CDATA[
+    <ul class="list-group">
+      <% @entries.each do |entry| %>
+        <li class="list-group-item"><a href="<%= entry['url'] %>" target="_blank"><%= entry['title'] %></a>
+      <% end %>
+    </ul>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  ]]></Content>
+</Module>
